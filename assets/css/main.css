@@ -94,7 +94,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 70px;
+  max-height: 90px;
   margin-right: 8px;
 }
 
@@ -1203,7 +1203,7 @@ section,
 
 .services .service-item {
   box-shadow: 0px 5px 90px 0px color-mix(in srgb, var(--default-color), transparent 90%);
-  padding: 50px 30px;
+  padding: 30px 20px;
   transition: all ease-in-out 0.4s;
   background-color: var(--contrast-color);
   height: 100%;
@@ -1222,7 +1222,7 @@ section,
 .services .service-item h4 {
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .services .service-item h4 a {
@@ -1231,7 +1231,7 @@ section,
 }
 
 .services .service-item p {
-  line-height: 24px;
+  line-height: 22px;
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -1243,6 +1243,53 @@ section,
 .services .service-item:hover h4 a {
   color: var(--accent-color);
 }
+
+.partner-item {
+  text-align: center;
+  padding: 15px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.partner-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.partner-item h4 {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.partner-item p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #777;
+}
+
+.partner-item:hover {
+  background: #e0e0e0;
+}
+
+.partner-item .img-fluid {
+  max-width: 100%;
+  height: 200px; /* Adjust this as needed to control the height */
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .partner-item {
+    min-height: 350px; /* Ensure a uniform height across all partner items */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1419,7 +1466,7 @@ section,
   border-radius: 5px;
   transition: 0.5s;
   padding: 30px;
-  height: 100%;
+  height: 90%;
 }
 
 @media (max-width: 468px) {
@@ -1432,7 +1479,15 @@ section,
 
 .team .team-member .pic {
   overflow: hidden;
-  width: 150px;
+  width: 70px;
+  /* height: 70px; */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.team .team-member .picGrande {
+  overflow: hidden;
+  width: 110px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -1447,6 +1502,7 @@ section,
 
 .team .team-member .member-info {
   padding-left: 30px;
+  padding-right: 10px;
 }
 
 @media (max-width: 468px) {
@@ -2136,4 +2192,110 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+/*--------------------------------------------------------------
+# Hero Sobre Nosotros Section
+--------------------------------------------------------------*/
+.hero2 {
+  --background-color: var(--hero-background-color);
+  --default-color: var(--hero-color);
+  --heading-color: var(--hero-color);
+  --contrast-color: var(--hero-color);
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero2 h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.hero2 p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 5px 0 30px 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.hero2 .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.hero2 .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero2 .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.hero2 .btn-watch-video i {
+  color: var(--contrast-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero2 .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.hero2 .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero2 .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 640px) {
+  .hero2 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero2 p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .hero2 .btn-get-started,
+  .hero2 .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
