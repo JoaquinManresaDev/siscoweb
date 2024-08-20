@@ -1483,6 +1483,7 @@ section,
   /* height: 70px; */
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 20px
 }
 
 .team .team-member .picGrande {
